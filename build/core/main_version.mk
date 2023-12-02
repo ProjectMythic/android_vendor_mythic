@@ -4,22 +4,22 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageOS System Version
+# MythicOS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
+    ro.mythic.version=$(MYTHIC_VERSION) \
+    ro.mythic.releasetype=$(MYTHIC_BUILDTYPE) \
+    ro.mythic.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.modversion=$(MYTHIC_VERSION) \
     ro.lineagelegal.url=https://lineageos.org/legal
 
-# LineageOS Platform Display Version
+# MythicOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
+    ro.mythic.display.version=$(MYTHIC_DISPLAY_VERSION)
 
-# LineageOS Platform SDK Version
+# MythicOS Platform SDK Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
+    ro.mythic.build.version.plat.sdk=$(MYTHIC_PLATFORM_SDK_VERSION)
 
-# LineageOS Platform Internal Version
+# MythicOS Platform Internal Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.mythic.build.version.plat.rev=$(MYTHIC_PLATFORM_REV)

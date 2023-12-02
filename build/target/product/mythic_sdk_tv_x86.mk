@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/gsi_release.mk)
-$(call inherit-product, device/google/atv/products/aosp_tv_arm.mk)
+include vendor/mythic/build/target/product/mythic_generic_tv_target.mk
 
-include vendor/lineage/build/target/product/lineage_generic_tv_target.mk
+$(call inherit-product, device/google/atv/products/sdk_atv_x86.mk)
 
-TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
+TARGET_NO_KERNEL_OVERRIDE := true
 
-PRODUCT_NAME := lineage_gsi_tv_arm
+# Enable mainline checking
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=
+# Overrides
+PRODUCT_NAME := mythic_sdk_tv_x86
+PRODUCT_MODEL := MythicOS Android TV SDK built for x86
+
+PRODUCT_SDK_ADDON_NAME := mythic
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

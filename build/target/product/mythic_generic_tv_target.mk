@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+$(call inherit-product, vendor/mythic/config/common_full_tv.mk)
 
 # Allow building otatools
 TARGET_FORCE_OTA_PACKAGE := true

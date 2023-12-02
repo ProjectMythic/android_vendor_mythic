@@ -14,10 +14,10 @@
 
 $(call inherit-product, device/generic/common/gsi_arm.mk)
 
-include vendor/lineage/build/target/product/lineage_generic_target.mk
+include vendor/mythic/build/target/product/mythic_generic_target.mk
 
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 TARGET_NO_KERNEL_OVERRIDE := true
 
-PRODUCT_NAME := lineage_gsi_arm
+PRODUCT_NAME := mythic_gsi_arm

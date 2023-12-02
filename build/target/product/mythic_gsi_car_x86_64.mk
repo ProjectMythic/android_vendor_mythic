@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/sdk_phone_x86_64.mk)
+$(call inherit-product, device/generic/car/gsi_car_x86_64.mk)
 
-include vendor/lineage/build/target/product/lineage_generic_target.mk
+include vendor/mythic/build/target/product/mythic_generic_car_target.mk
 
-# Always build modules from source
-PRODUCT_MODULE_BUILD_FROM_SOURCE := true
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
+TARGET_NO_KERNEL_OVERRIDE := true
 
 # Enable mainline checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
-# Overrides
-PRODUCT_NAME := lineage_sdk_phone_x86_64
-PRODUCT_MODEL := LineageOS Android SDK built for x86_64
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/Home/Home.apk
 
-PRODUCT_SDK_ADDON_NAME := lineage
-PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties
+PRODUCT_NAME := mythic_gsi_car_x86_64

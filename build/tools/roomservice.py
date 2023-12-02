@@ -53,7 +53,7 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from MythicOS Github (https://github.com/Mythic-Devices)." % device)
 
 repositories = []
 
@@ -213,7 +213,7 @@ def add_to_manifest(repositories):
 
 def fetch_dependencies(repo_path):
     print('Looking for dependencies in %s' % repo_path)
-    dependencies_path = repo_path + '/lineage.dependencies'
+    dependencies_path = repo_path + '/mythic.dependencies'
     syncable_repos = []
     verify_repos = []
 
